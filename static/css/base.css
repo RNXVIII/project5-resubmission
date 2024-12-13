@@ -1,14 +1,18 @@
 html {
     height: 100%;
 }
+
 /*used from boutique ado to ensure homepage image lookes nice and fits within the project*/
+
 body {
     background: url('/media/background_image.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+
 }
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -17,21 +21,26 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+
 .logo-font {
     text-transform: uppercase;
 }
+
 .main-logo-link {
     width: fit-content;
 }
+
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
 }
+
 .btn-black {
     background: black;
     color: white;
 }
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -41,26 +50,67 @@ body {
     background: #222;
     color: white;
 }
+
 .text-black {
     color: #000 !important;
 }
+
+.bg-purple {
+    background-color: #BF40BF;
+    border-radius: 10px;
+}
+
 .text-white {
     color: white !important;
-    background-color: #000;
-    border-radius: 10px;
-    padding: 5px;
 }
+
 .border-black {
     border: 1px solid black !important;
 }
+
 /* -------------------------------- Media Queries */
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+
+/* this id is for helping me achieve getting my website to look nice on smaller screens!*/
+
+/* Default styling for small screens */
+#responsive-heading {
+    font-size: 1.2rem; /* Smaller font size for small screens */
+    font-weight: 600;  /* Slightly bold font for smaller screens */
 }
-/* fixed top navbar only on medium and up */
+
+/* Medium screens and above (Laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Laptops and smaller desktops */
+    .custom-heading-container {
+        padding: 5rem 1rem; /* Increase vertical padding for laptops */
+        height: auto; /* Adjust height if needed */
+    }
+
+    #responsive-heading {
+        font-size: 2.5rem; /* Increase font size for laptop screens */
+        font-weight: 700;  /* Bold font weight */
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%; /* Set container max-width for large screens */
+    }
+
+    .custom-heading-container {
+        padding: 6rem 1rem; /* Increase vertical padding for large screens */
+        height: auto; /* Adjust height if needed */
+    }
+
+    #responsive-heading {
+        font-size: 3rem; /* Larger font size for large screens */
+        font-weight: 700; /* Bold font weight */
+        line-height: 1.2; /* Ensures readability */
+    }
+}
+
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -69,7 +119,10 @@ body {
         left: 0;
         z-index: 1030;
     }
+
     .header-container {
         padding-top: 164px;
     }
 }
+
+  
